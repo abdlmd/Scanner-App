@@ -143,6 +143,14 @@ namespace ScannerDemo
                 textBox1.Text = folderDlg.SelectedPath;
             }
         }
-         
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.BearerToken = string.Empty;
+            Properties.Settings.Default.Save();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
+        }
     }
 }
